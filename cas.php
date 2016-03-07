@@ -1,0 +1,23 @@
+<?php
+
+	require_once("CAS-1.3.4/CAS.php");
+
+	$confCas = array(
+  		'host' => "cas-ha.univ-nantes.fr",
+  		'port' => 443,
+  		'url' => "/esup-cas-server/"
+	);
+
+	phpCAS::client(CAS_VERSION_2_0, $confCas['host'], $confCas['port'], $confCas['url']);
+
+	//configuration du proxy étudiant pour le cas des projets
+	// phpCAS::setExtraCurlOption(CURLOPT_PROXYTYPE, 'URLPROXY_HTTP');
+	// phpCAS::setExtraCurlOption(CURLOPT_RETURNTRANSFER, TRUE);
+	// phpCAS::setExtraCurlOption(CURLOPT_PROXY, 'proxyetu.iut-nantes.univ-nantes.prive:3128');
+
+	phpCAS::setNoCasServerValidation();
+
+	phpCAS::forceAuthentication();
+
+	$login=phpCAS::getUser();
+?>

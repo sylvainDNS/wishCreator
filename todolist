@@ -1,0 +1,37 @@
+TO DO LIST :
+
+* Prendre RDV avec Marie Brunet pour qu'elle approuve ce qu'on lui propose, et savoir les éléments à changer.
+
+* Récupérer les noms d'utilisateurs grâce à la BD de l'UN et les enregistrer en variables de session
+    Pour l'utiliser :
+        require_once("ldap/ldap.class.php");
+    Puis une fois l'authentification effectuée et le login récupéré dans $login :
+        $ldap = new LDAP();
+        $userdata = $ldap->getuserinfo($login);
+        $fullname = $userdata[0]['displayname'][0];
+
+* Une fois les noms/prenoms/id obtenus, on implémante une fonction dans generate.php pour qu'une image soit créée par utlisateur, avec son nom d'utilisateur. ex : e145262h.jpg
+
+* En cours --> Mettre en place l'envoi de mail sur la page mail.php
+    N.B. : sylvain.denyse@etu.univ-nantes.fr = e145252h@etu.univ-nantes.fr
+
+* Mettre l'image générée en pièce jointe de l'email
+
+* En cours --> Il faut que l'image générée par generate.php et affichée sur visualisation.php soit identique à la prévisualisation de index.html. Régler ce problème.
+    Voir pour trouver comment justifier le texte qur l'image générée
+
+* Mettre en place le CAS
+
+* Options d'éditions de texte (https://openclassrooms.com/courses/creez-un-editeur-de-texte-wysiwyg)
+
+_____________________________________________________________________________________________________________________________________________________________________
+
+OK :
+
+* OK --> Régler la taille du contenteditable sur index.html
+
+* OK --> Script javascripts pour afficher les champs mail "hidden" au fur et à mesure sur visualisation.php
+
+* OK --> Régler le problème de superpostion des logos lorsqu'on réduit la taille de la fenêtre
+
+* OK --> Bouton déconnexion

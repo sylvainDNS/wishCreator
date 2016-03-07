@@ -1,0 +1,146 @@
+body {
+    background: transparent url(../img/body.jpg) no-repeat;
+    background-size: 100% 128px;
+    color: #333;
+    font: 500 .75em/1.5 arial, helvetica, sans-serif;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+}
+
+#header table{
+    width: 100%;
+    -webkit-box-shadow: 0 0 10px 5px #333333;
+    -moz-box-shadow: 0 0 10px 5px #333333;
+    box-shadow: 0 0 10px 5px #333333;
+}
+
+#header a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+#titre{
+    text-align: center;
+    font-size: 40;
+}
+
+#titre a{
+    margin: auto;
+    padding-top: 70px;
+}
+
+#logoGauche{
+    text-align: left;
+    width: 165px;
+}
+
+#logoDroite{
+    text-align: right;
+    width: 165px;
+}
+
+#deconnexion{
+    text-align: center;
+    float: right;
+}
+
+#deconnexion a{
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    display: block;
+    background-image: url(http://www.intraetu.univ-nantes.fr/jsp/styles/defaut/img/se_deconnecter.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100px;
+    height: 33px;
+    padding-top: 36px;
+    margin-top: 2px;
+}
+
+#pied_page {
+    -webkit-box-shadow: 0 0 10px 5px #333333;
+    -moz-box-shadow: 0 0 10px 5px #333333;
+    box-shadow: 0 0 10px 5px #333333;
+    background: #003869 url(img/pied_page.png) repeat-x 0 0;
+    color: #fff;
+    font-size: .9167em;
+    margin: 0;
+    margin-top : 20px;
+    min-height: 67px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#accueil{
+    margin-top: 27px;
+}
+
+.corps{
+    width: 450px;
+    margin: 15px auto auto auto;
+    background-color: #F2F2F2;
+    padding: 10px;
+    text-align: justify;
+
+    box-shadow: 0 0 15px #888888;
+    border: 2px;
+    border-radius: 10px;
+}
+
+#visualisation{
+    width: 858px;
+    text-align: center;
+}
+
+#contenant{
+    text-align: center;
+}
+
+#contenu{
+    width: 370px;
+    height: 310px;
+    margin: 30px 30px 0 40px;
+    position: absolute;
+	z-index: 3;
+
+	text-align: justify;
+    font-size: 16px;
+}
+
+#carte{
+	position:relative;
+	z-index:2;
+
+	border-style: solid;
+}
+
+#sendText{
+    text-align: center;
+}
+
+#saisieMail{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#saisieMail a{
+    text-decoration: none;
+    color: black;
+}
+
+.copyright li{
+	display: block;
+	line-height: 1.25em;
+	border: 0;
+	padding: 0;
+	margin: 1em 0 0 0;
+}
+
+.copyright a{
+	color: white;
+}
