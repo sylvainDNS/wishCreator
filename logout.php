@@ -17,5 +17,5 @@
     phpCAS::setNoCasServerValidation();
 
     echo "...";
-    phpCAS::logoutWithRedirectService("http://localhost");
+    phpCAS::logoutWithRedirectService("http://localhost/wishCreator/");
     echo "done";
