@@ -42,9 +42,29 @@ body {
     width: 165px;
 }
 
+#admin{
+    text-align: center;
+    float: left;
+}
+
+
 #deconnexion{
     text-align: center;
     float: right;
+}
+
+#admin a{
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    display: block;
+    background-image: url(../img/admin.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 100px;
+    height: 33px;
+    padding-top: 36px;
+    margin-top: 2px;
 }
 
 #deconnexion a{
@@ -52,7 +72,7 @@ body {
     color: black;
     font-size: 10px;
     display: block;
-    background-image: url(http://www.intraetu.univ-nantes.fr/jsp/styles/defaut/img/se_deconnecter.png);
+    background-image: url(../img/se_deconnecter.png);
     background-repeat: no-repeat;
     background-position: center top;
     width: 100px;
@@ -73,10 +93,6 @@ body {
     min-height: 67px;
     padding: 10px 0;
     text-align: center;
-}
-
-#accueil{
-    margin-top: 27px;
 }
 
 .corps{

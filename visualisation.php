@@ -1,4 +1,6 @@
-<?php require_once("cas.php");?>
+<?php
+    require_once("cas.php");
+?>
 
 <html>
 <head>
@@ -13,24 +15,35 @@
         <table>
             <tr>
                 <td id="logoGauche"><a href="http://www.univ-nantes.fr/" title="Retour à la page d'accueil de l'Université de Nantes"><img src="http://www.univ-nantes.fr/images/logo.png?new=2012050301" alt="Site de l'Université"></a></td>
-                <td id="titre"><a href="index.php" title="Accueil">WishCreator</a></td>
+                <td id="titre"><a href="editor.php" title="Accueil">WishCreator</a></td>
                 <td id="logoDroite"><a href="http://www.iutnantes.univ-nantes.fr/" title="Retour à la page d'accueil de l'IUT de Nantes"><img src="http://www.iutnantes.univ-nantes.fr/images/logos/iutNantes.jpg?v=20150403" alt="Site de l'IUT"></a></td>
             </tr>
         </table>
     </div>
 
+    <?php
+    if($login == 'E145252H' || $login == 'mbrunet')
+    {
+        ?>
+        <div id="admin">
+            <a href="admin.php" title="Page d'administration">Administration</a>
+        </div>
+        <?php
+    }
+    ?>
+
     <div id="deconnexion">
-        <a href="logout.php">Déconnexion</a>
+        <a href="logout.php" title="Se déconnecter">Déconnexion</a>
     </div>
 
-    <div id="accueil" class="corps">
+    <div class="corps">
         Voici la carte de vœux que recevront vos contacts. Si elle vous convient, saisissez les coordonnées de vos contacts, puis cliquez sur
         <i>Envoyer</i>, sinon cliquez sur <i>Retour</i>. Vous pouvez aussi choisir de <a href="temp/carteTest.jpg" download title="Cliquez ici pour télécharger la carte de vœux">télécharger</a> l'image.
     </div>
 
     <div id="visualisation" class="corps">
 
-  		<img id="carte" src="temp/carteTest.jpg" width="808"/>
+  		<img id="carte" src="temp/cartedevoeuxFull.jpg" width="808"/>
 
     </div>
 
