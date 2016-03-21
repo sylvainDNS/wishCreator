@@ -1,18 +1,11 @@
 <?php
-
 require_once("cas.php");
-// require_once("ldap/ldap.class.php");
+require_once("ldap/ldap.class.php");
 
-// $ldap = new LDAP();
-// $userdata = $ldap->getuserinfo($login);
-// echo $login;
-// echo $userdata;
-
-/**
-A supprimer après tests
-**/
-
-$login = 'E145252H';
+$ldap = new LDAP();
+$userdata = $ldap->getuserinfo($login);
+$login = strtoupper($login);
+$fullname = $userdata[0]['displayname'][0];
 
 
 // Supprime tous les fichiers du dossier temp ayant plus d'un jour (86400 sec)
@@ -104,7 +97,7 @@ function genImage(){
 }
 
 // phpinfo();
-genImage();
+// genImage();
 supprimerFichiersVieux();
 
 header('Location: visualisation.php');

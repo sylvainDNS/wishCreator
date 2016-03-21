@@ -1,15 +1,12 @@
 <?php
 require_once("cas.php");
-// require_once("ldap/ldap.class.php");
+require_once("ldap/ldap.class.php");
 
-// $ldap = new LDAP();
-// $userdata = $ldap->getuserinfo($login);
+$ldap = new LDAP();
+$userdata = $ldap->getuserinfo($login);
+$login = strtoupper($login);
+$fullname = $userdata[0]['displayname'][0];
 
-/**
-A supprimer après tests
-**/
-
-$login = 'E145252H';
 ?>
 
 <html>

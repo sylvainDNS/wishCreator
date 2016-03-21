@@ -85,7 +85,7 @@ body {
     -webkit-box-shadow: 0 0 10px 5px #333333;
     -moz-box-shadow: 0 0 10px 5px #333333;
     box-shadow: 0 0 10px 5px #333333;
-    background: #003869 url(img/pied_page.png) repeat-x 0 0;
+    background: #003869 url(../img/pied_page.png) repeat-x 0 0;
     color: #fff;
     font-size: .9167em;
     margin: 0;
@@ -146,7 +146,7 @@ body {
 
 #saisieMail a{
     text-decoration: none;
-    color: black;
+    color: bcdlack;
 }
 
 .copyright li{

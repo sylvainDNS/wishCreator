@@ -1,16 +1,12 @@
 <?php
 require_once("cas.php");
-// require_once("ldap/ldap.class.php");
+require_once("ldap/ldap.class.php");
 
-// $ldap = new LDAP();
-// $userdata = $ldap->getuserinfo($login);
+$ldap = new LDAP();
+$userdata = $ldap->getuserinfo($login);
+$login = strtoupper($login);
+$fullname = $userdata[0]['displayname'][0];
 
-/**
-A supprimer après tests
-**/
-
-$login = 'E145252H';
-$userdata = 'Sylvain DENYSE';
 ?>
 
 <html>
@@ -33,7 +29,7 @@ $userdata = 'Sylvain DENYSE';
     </div>
 
     <?php
-    if($login == 'E145252H' || $login == 'mbrunet')
+    if($login == 'E145252H' || $login == 'MBRUNET')
     {
         ?>
         <div id="admin">
@@ -53,7 +49,7 @@ $userdata = 'Sylvain DENYSE';
     {
     ?>
     <div class="corps">
-        Bonjour <?php echo $userdata ?> ! Nous espérons que vous allez bien. Passez une agréable journée ;)
+        Bonjour <?php echo $fullname ?> ! Nous espérons que vous allez bien. Passez une agréable journée ;)
     </div>
     <?php
 }else{

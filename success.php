@@ -1,9 +1,12 @@
 <?php
-    require_once("cas.php");
-    require_once("ldap/ldap.class.php");
+require_once("cas.php");
+require_once("ldap/ldap.class.php");
 
-    $ldap = new LDAP();
-    $userdata = $ldap->getuserinfo($login);
+$ldap = new LDAP();
+$userdata = $ldap->getuserinfo($login);
+$login = strtoupper($login);
+$fullname = $userdata[0]['displayname'][0];
+
 ?>
 
 <html>
@@ -42,7 +45,7 @@
 
     <div class="corps">
         Félicitation ! Votre carte de vœux a bien été envoyé. Merci de nous avoir fait confiance.</br>
-        <a href="index.php">Cliquez ici</a> pour réaliser une nouvelle carte de vœux.
+        <a href="index.html">Cliquez ici</a> pour réaliser une nouvelle carte de vœux.
     </div>
 
     <div id="pied_page">

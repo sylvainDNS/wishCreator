@@ -1,11 +1,18 @@
 <?php
-    require_once("cas.php");
+require_once("cas.php");
+require_once("ldap/ldap.class.php");
+
+$ldap = new LDAP();
+$userdata = $ldap->getuserinfo($login);
+$login = strtoupper($login);
+$fullname = $userdata[0]['displayname'][0];
+
 ?>
 
 <html>
 <head>
     <title>WishCreator v2</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <script src="js/script.js"></script>
@@ -14,9 +21,9 @@
     <div id="header">
         <table>
             <tr>
-                <td id="logoGauche"><a href="http://www.univ-nantes.fr/" title="Retour à la page d'accueil de l'Université de Nantes"><img src="http://www.univ-nantes.fr/images/logo.png?new=2012050301" alt="Site de l'Université"></a></td>
+                <td id="logoGauche"><a href="http://www.univ-nantes.fr/" title="Retour à la page d'accueil de l'Université de Nantes"><img src="img/logoUN.png" alt="Site de l'Université"></a></td>
                 <td id="titre"><a href="editor.php" title="Accueil">WishCreator</a></td>
-                <td id="logoDroite"><a href="http://www.iutnantes.univ-nantes.fr/" title="Retour à la page d'accueil de l'IUT de Nantes"><img src="http://www.iutnantes.univ-nantes.fr/images/logos/iutNantes.jpg?v=20150403" alt="Site de l'IUT"></a></td>
+                <td id="logoDroite"><a href="http://www.iutnantes.univ-nantes.fr/" title="Retour à la page d'accueil de l'IUT de Nantes"><img src="img/logoIUT.png" height="120" alt="Site de l'IUT"></a></td>
             </tr>
         </table>
     </div>
