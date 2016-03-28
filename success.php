@@ -21,9 +21,9 @@ $fullname = $userdata[0]['displayname'][0];
     <div id="header">
         <table>
             <tr>
-                <td id="logoGauche"><a href="http://www.univ-nantes.fr/" title="Retour à la page d'accueil de l'Université de Nantes"><img src="http://www.univ-nantes.fr/images/logo.png?new=2012050301" alt="Site de l'Université"></a></td>
+                <td id="logoGauche"><a href="http://www.univ-nantes.fr/" title="Retour à la page d'accueil de l'Université de Nantes"><img src="img/logoUN.png" alt="Site de l'Université"></a></td>
                 <td id="titre"><a href="editor.php" title="Accueil">WishCreator</a></td>
-                <td id="logoDroite"><a href="http://www.iutnantes.univ-nantes.fr/" title="Retour à la page d'accueil de l'IUT de Nantes"><img src="http://www.iutnantes.univ-nantes.fr/images/logos/iutNantes.jpg?v=20150403" alt="Site de l'IUT"></a></td>
+                <td id="logoDroite"><a href="http://www.iutnantes.univ-nantes.fr/" title="Retour à la page d'accueil de l'IUT de Nantes"><img src="img/logoIUT.png" height="120" alt="Site de l'IUT"></a></td>
             </tr>
         </table>
     </div>
