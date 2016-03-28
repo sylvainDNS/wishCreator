@@ -1,11 +1,11 @@
 <?php
-require_once("cas.php");
-require_once("ldap/ldap.class.php");
+// require_once("cas.php");
+// require_once("ldap/ldap.class.php");
 
-$ldap = new LDAP();
-$userdata = $ldap->getuserinfo($login);
-$login = strtoupper($login);
-$fullname = $userdata[0]['displayname'][0];
+// $ldap = new LDAP();
+// $userdata = $ldap->getuserinfo($login);
+// $login = strtoupper($login);
+// $fullname = $userdata[0]['displayname'][0];
 
 ?>
 
@@ -59,12 +59,12 @@ $fullname = $userdata[0]['displayname'][0];
     </div>
 
     <div id="sendText" class="corps">
-        <!--ICI-->        <p><form method="POST" action="generate.php">
-        <input id="leTexte" type="hidden" name="texte"/>
-        <input type="color" name="color"></br>
-        <input type="submit" value="Envoyer" onclick="transcript();">
-    </form></p>
-</div>
+        <p><form method="POST" action="generate.php">
+            <input id="leTexte" type="hidden" name="texte"/>
+            <input type="color" name="color" hidden="hidden"></br>
+            <input type="submit" value="Envoyer" onclick="transcript();">
+        </form></p>
+    </div>
 
 <div id="pied_page">
     <ul class="copyright">

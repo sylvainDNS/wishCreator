@@ -96,8 +96,7 @@ function genImage(){
     }
 }
 
-// phpinfo();
-// genImage();
+genImage();
 supprimerFichiersVieux();
 
 header('Location: visualisation.php');

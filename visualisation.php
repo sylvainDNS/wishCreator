@@ -1,11 +1,13 @@
 <?php
-require_once("cas.php");
-require_once("ldap/ldap.class.php");
+// require_once("cas.php");
+// require_once("ldap/ldap.class.php");
+//
+// $ldap = new LDAP();
+// $userdata = $ldap->getuserinfo($login);
+// $login = strtoupper($login);
+// $fullname = $userdata[0]['displayname'][0];
 
-$ldap = new LDAP();
-$userdata = $ldap->getuserinfo($login);
-$login = strtoupper($login);
-$fullname = $userdata[0]['displayname'][0];
+$login = 'E145252H';
 
 ?>
 
@@ -50,7 +52,7 @@ $fullname = $userdata[0]['displayname'][0];
 
     <div id="visualisation" class="corps">
 
-  		<img id="carte" src="temp/cartedevoeuxFull.jpg" width="808"/>
+  		<img id="carte" src="temp/<?php echo $login ?>.jpg" width="808"/>
 
     </div>
 
@@ -71,7 +73,7 @@ $fullname = $userdata[0]['displayname'][0];
             <br>
             <a href="javascript:ajoutMail()" title="Ajouter un destinataire">+</a>
             <br>
-            <input type="button" value="Retour" name="retour">
+            <input type="button" value="Retour" onclick="precedent()">
    			<input type="submit" value="Envoyer">
         </form></p>
     </div>
