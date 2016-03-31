@@ -1,11 +1,15 @@
 <?php
-require_once("cas.php");
-require_once("ldap/ldap.class.php");
+// require_once("cas.php");
+// require_once("ldap/ldap.class.php");
+require_once("auth.php");
 
-$ldap = new LDAP();
-$userdata = $ldap->getuserinfo($login);
-$login = strtoupper($login);
-$fullname = $userdata[0]['displayname'][0];
+// $ldap = new LDAP();
+// $userdata = $ldap->getuserinfo($login);
+// $login = strtoupper($login);
+// $fullname = $userdata[0]['displayname'][0];
+
+$fullname = "Dieu";
+$login = 'E145252H';
 
 ?>
 
@@ -30,7 +34,7 @@ $fullname = $userdata[0]['displayname'][0];
     </div>
 
     <?php
-    if($login == 'E145252H' || $login == 'MBRUNET')
+    if(isAdmin($login))
     {
         ?>
         <div id="admin">
@@ -63,7 +67,9 @@ $fullname = $userdata[0]['displayname'][0];
     <?php
 }
     ?>
+
     <div class="corps">
+        <h1>Upload de cartes de voeux</h1>
         <form class="" action="upload.php" method="post" enctype="multipart/form-data">
             Sélectionnez l'image de la carte de vœux (dans son intégralité) à importer sur le serveur :<br>
             <input type="file" name="fichierCarteFull" id="fichierCarte"><br><br>
@@ -72,6 +78,28 @@ $fullname = $userdata[0]['displayname'][0];
             <input type="file" name="fichierCartePrev" id="fichierCarte"><br><br>
 
             <input type="submit" value="Charger l'image" name="submit">
+        </form>
+    </div>
+
+    <div class="corps">
+        <h1>Gestion des administrateurs</h1>
+        <u>Liste des administrateurs : </u><br><ul>
+        <?php
+            $listAdmin = listAdmin();
+            foreach ($listAdmin as $admin) {
+                echo "<li>";
+                echo $admin;
+                echo "</li>";
+            }
+         ?>
+     </ul>
+         <br>
+        <form class="" action="auth.php" method="post" enctype="multipart/form-data">
+            Veuillez saisir le login de l'administrateur sur lequel effectuer une action : <br>
+            <input type="text" name="login" id="fichierCarte"><br>
+            <input type="radio" name="choix" value="add" checked> Ajouter un administrateur<br>
+            <input type="radio" name="choix" value="del"> Supprimer un administrateur<br>
+            <input type="submit" value="Valider" name="submit">
         </form>
     </div>
 

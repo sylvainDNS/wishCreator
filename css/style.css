@@ -8,6 +8,13 @@ body {
     padding: 0;
 }
 
+h1{
+    text-align: center;
+    font-size: 20;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
 #header table{
     width: 100%;
     -webkit-box-shadow: 0 0 10px 5px #333333;
