@@ -19,14 +19,6 @@ function envoiMail($fullname, $login){
     $mail->setFrom($sender.'@univ-nantes.fr', $fullname);
 
     // Destinataire
-    // for ($i = 1 ; $i <= 10 ; $i += 1){
-    //     if($_POST["mail".$i] != ""){
-    //         if (filter_var($_POST["mail".$i], FILTER_VALIDATE_EMAIL)) {
-    //             $mail->addAddress($_POST["mail".$i]);
-    //         }
-    //     }
-    // }
-
     if(isset($_POST['mail']) && is_array($_POST['mail'])) {
         foreach($_POST['mail'] as $i => $str) {
             if (filter_var($str, FILTER_VALIDATE_EMAIL)) {

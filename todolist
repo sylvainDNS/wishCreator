@@ -1,10 +1,7 @@
 TO DO LIST :
 
-
 ******** IMPORTANT AVANT RENDU ********
 * Accès à admin.php
-
-* Validation adresse mail via js & php
 
 * Couleur du texte pour l'admin
 ***************************************
@@ -14,7 +11,6 @@ TO DO LIST :
 
 * Options d'éditions de texte (https://openclassrooms.com/courses/creez-un-editeur-de-texte-wysiwyg)
 
-* Modifier couleur texte via le panneau d'admin
 _____________________________________________________________________________________________________________________________________________________________________
 
 OK :
@@ -45,3 +41,5 @@ OK :
 
 * OK --> Mettre en place l'envoi de mail sur la page mail.php
     N.B. : sylvain.denyse@etu.univ-nantes.fr = e145252h@etu.univ-nantes.fr
+
+* OK --> Validation adresse mail via js & php
