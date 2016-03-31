@@ -21,7 +21,6 @@ function envoiMail($fullname, $login){
     // Destinataire
     for ($i = 1 ; $i <= 10 ; $i += 1){
         if($_POST["mail".$i] != ""){
-            $mail->addAddress($_POST["mail".$i]);
             if (filter_var($_POST["mail".$i], FILTER_VALIDATE_EMAIL)) {
                 $mail->addAddress($_POST["mail".$i]);
             }

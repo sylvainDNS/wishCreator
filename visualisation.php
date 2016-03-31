@@ -1,13 +1,11 @@
 <?php
-// require_once("cas.php");
-// require_once("ldap/ldap.class.php");
-//
-// $ldap = new LDAP();
-// $userdata = $ldap->getuserinfo($login);
-// $login = strtoupper($login);
-// $fullname = $userdata[0]['displayname'][0];
+require_once("cas.php");
+require_once("ldap/ldap.class.php");
 
-$login = 'E145252H';
+$ldap = new LDAP();
+$userdata = $ldap->getuserinfo($login);
+$login = strtoupper($login);
+$fullname = $userdata[0]['displayname'][0];
 
 ?>
 
@@ -59,16 +57,16 @@ $login = 'E145252H';
     <div id="saisieMail" class="corps">
         <p><form method="POST" action="mail.php">
             <tr>
-                <td><input id="1" type="text" name="mail1" placeholder="destinataire@mail.fr"></td>
-                <td><input id="2" type="hidden" name="mail2" placeholder="destinataire@mail.fr"></td>
-                <td><input id="3" type="hidden" name="mail3" placeholder="destinataire@mail.fr"></td>
-                <td><input id="4" type="hidden" name="mail4" placeholder="destinataire@mail.fr"></td>
-                <td><input id="5" type="hidden" name="mail5" placeholder="destinataire@mail.fr"></td>
-                <td><input id="6" type="hidden" name="mail6" placeholder="destinataire@mail.fr"></td>
-                <td><input id="7" type="hidden" name="mail7" placeholder="destinataire@mail.fr"></td>
-                <td><input id="8" type="hidden" name="mail8" placeholder="destinataire@mail.fr"></td>
-                <td><input id="9" type="hidden" name="mail9" placeholder="destinataire@mail.fr"></td>
-                <td><input id="10" type="hidden" name="mail10" placeholder="destinataire@mail.fr"></td>
+                <td><input id="1" type="text" name="mail1" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="2" type="hidden" name="mail2" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="3" type="hidden" name="mail3" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="4" type="hidden" name="mail4" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="5" type="hidden" name="mail5" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="6" type="hidden" name="mail6" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="7" type="hidden" name="mail7" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="8" type="hidden" name="mail8" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="9" type="hidden" name="mail9" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
+                <td><input id="10" type="hidden" name="mail10" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
             </tr>
             <br>
             <a href="javascript:ajoutMail()" title="Ajouter un destinataire">+</a>
