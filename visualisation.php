@@ -15,7 +15,6 @@ $fullname = $userdata[0]['displayname'][0];
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
-    <script src="js/script.js"></script>
 </head>
 <body>
     <div id="header">
@@ -55,25 +54,17 @@ $fullname = $userdata[0]['displayname'][0];
     </div>
 
     <div id="saisieMail" class="corps">
-        <p><form method="POST" action="mail.php">
-            <tr>
-                <td><input id="1" type="text" name="mail1" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="2" type="hidden" name="mail2" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="3" type="hidden" name="mail3" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="4" type="hidden" name="mail4" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="5" type="hidden" name="mail5" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="6" type="hidden" name="mail6" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="7" type="hidden" name="mail7" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="8" type="hidden" name="mail8" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="9" type="hidden" name="mail9" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-                <td><input id="10" type="hidden" name="mail10" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></td>
-            </tr>
-            <br>
-            <a href="javascript:ajoutMail()" title="Ajouter un destinataire">+</a>
-            <br>
-            <input type="button" value="Retour" onclick="precedent()">
-   			<input type="submit" value="Envoyer">
-        </form></p>
+        <p>
+            <form method="POST" action="mail.php">
+                <ul id="mails">
+                    <li><input type="text" name="mail[]" placeholder="destinataire@mail.fr" onblur="verifMail(this)"></li>
+                </ul>
+                <a href="#ajoutMail" onclick="ajoutMail();" title="Ajouter un destinataire">+</a>
+                <br>
+                <input type="button" value="Retour" onclick="precedent()">
+       			<input type="submit" name="envoyerLOL" value="Envoyer">
+           </form>
+        </p>
     </div>
 
     <div id="pied_page">
@@ -87,5 +78,7 @@ $fullname = $userdata[0]['displayname'][0];
 			<li>Années 2015 - 2016</li>
 		</ul>
 	</div>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

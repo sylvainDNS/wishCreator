@@ -1,11 +1,11 @@
 <?php
-// require_once("cas.php");
-// require_once("ldap/ldap.class.php");
+require_once("cas.php");
+require_once("ldap/ldap.class.php");
 
-// $ldap = new LDAP();
-// $userdata = $ldap->getuserinfo($login);
-// $login = strtoupper($login);
-// $fullname = $userdata[0]['displayname'][0];
+$ldap = new LDAP();
+$userdata = $ldap->getuserinfo($login);
+$login = strtoupper($login);
+$fullname = $userdata[0]['displayname'][0];
 
 ?>
 
@@ -15,6 +15,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -51,7 +52,7 @@
 
         <div id="contenant">
 
-            <p id="contenu" contenteditable="true" onblur="transcript();">Meilleurs voeux !</p>
+            <p id="contenu" contenteditable="true" onkeypress="transcript();">Meilleurs voeux !</p>
             <img id="carte" src="img/cartedevoeuxPrev.png">
 
         </div>
@@ -60,7 +61,7 @@
 
     <div id="sendText" class="corps">
         <p><form method="POST" action="generate.php">
-            <input id="leTexte" type="hidden" name="texte"/>
+            <input id="leTexte" hidden="hidden" name="texte"/>
             <input type="color" name="color" hidden="hidden"></br>
             <input type="submit" value="Envoyer" onclick="transcript();">
         </form></p>

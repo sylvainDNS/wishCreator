@@ -119,6 +119,9 @@ body {
 #contenu{
     width: 370px;
     height: 310px;
+    resize: none;
+    max-width: 370px;
+    max-height: 310px;
     margin: 30px 30px 0 40px;
     position: absolute;
 	z-index: 3;
@@ -142,6 +145,12 @@ body {
     text-align: center;
     font-size: 17px;
     font-weight: bold;
+}
+
+#mails {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 #saisieMail a{

@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE);
+
 require_once("cas.php");
 require_once("ldap/ldap.class.php");
 
@@ -18,7 +20,7 @@ function supprimerFichiersVieux(){
     }
 }
 
-function genImage(){
+function genImage($login){
     try{
         //Création des prérequis Imagick
         $image = new Imagick();
@@ -85,8 +87,7 @@ function genImage(){
         for($i = 0;$i < $arr_length; $i++)
         {
             $num = 100+50*$i;
-            $image->annotateImage($draw, 1000, $num , 0, $arrayOutput[$i]);
-
+            $image->annotateImage($draw, 1000, $num , 0,  br2newline($arrayOutput[$i]));
         }
 
         $image->writeImage('temp/'.$login.'.jpg');
@@ -96,7 +97,12 @@ function genImage(){
     }
 }
 
-genImage();
+function br2newline( $input ) {
+     $out = str_replace( "<br>", "\n", $input );
+     return $out;
+}
+
+genImage($login);
 supprimerFichiersVieux();
 
 header('Location: visualisation.php');

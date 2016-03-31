@@ -15,6 +15,7 @@ $fullname = $userdata[0]['displayname'][0];
 	<meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
