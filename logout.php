@@ -17,5 +17,5 @@
     phpCAS::setNoCasServerValidation();
 
     echo "...";
-    phpCAS::logoutWithRedirectService("http://localhost/wishCreator/");
+    phpCAS::logoutWithRedirectService("http://infoweb.iut-nantes.univ-nantes.prive/~carte-voeux/");
     echo "done";

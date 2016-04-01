@@ -30,7 +30,7 @@ $fullname = $userdata[0]['displayname'][0];
     </div>
 
     <?php
-    if($login == 'E145252H' || $login == 'mbrunet')
+    if(isAdmin($login))
     {
         ?>
         <div id="admin">
