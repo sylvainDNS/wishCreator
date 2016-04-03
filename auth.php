@@ -23,6 +23,7 @@ function isAdmin($login){
 
 function addAdmin($login){
     // a : écriture seule, si le fichier n'existe pas il est créé
+<<<<<<< HEAD
 	if(!isAdmin()){
 		$fichierAuth = fopen($GLOBALS["PATH"], 'a');
 
@@ -35,6 +36,17 @@ function addAdmin($login){
 	}else{
 		return $login." est déjà administrateur."
 	}
+=======
+
+    $fichierAuth = fopen($GLOBALS["PATH"], 'a');
+
+    fputs($fichierAuth, $login);
+    fputs($fichierAuth, "\n");
+
+    fclose($fichierAuth);
+
+    return "L'administrateur ".$login." a été ajouté.";
+>>>>>>> e1c0585d2172ac002ab38a0597d42ac94024a827
 }
 
 function delAdmin($login){
@@ -77,6 +89,7 @@ if(isset($_POST["login"]) && isset($_POST["choix"])){
 
     $login = strtoupper($_POST["login"]);
 
+<<<<<<< HEAD
 	if($login != ""){
 		if($_POST["choix"] == "add"){
 			$message = addAdmin($login);
@@ -88,4 +101,18 @@ if(isset($_POST["login"]) && isset($_POST["choix"])){
 	}
 
     header('Location: admin.php?&message='.$GLOBALS["message"]);
+=======
+        if($login != ""){
+            if($_POST["choix"] == "add"){
+                $message = addAdmin($login);
+            }elseif ($_POST["choix"] == "del") {
+                $message = delAdmin($login);
+            }
+        }else{
+            $messsage = "Le login n'existe pas.";
+        }
+
+        echo headers_sent();
+    // header('Location: admin.php?&message='.$GLOBALS["message"]);
+>>>>>>> e1c0585d2172ac002ab38a0597d42ac94024a827
 }

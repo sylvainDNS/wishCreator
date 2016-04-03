@@ -53,7 +53,7 @@ $fullname = $userdata[0]['displayname'][0];
 
         <div id="contenant">
 
-            <p id="contenu" contenteditable="true" onblur="transcript();">Meilleurs voeux !</p>
+            <p id="contenu" contenteditable="true" onkeypress="transcript();">Meilleurs voeux !</p>
             <img id="carte" src="img/cartedevoeuxPrev.png">
 
         </div>
