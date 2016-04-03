@@ -1,17 +1,5 @@
 TO DO LIST :
 
-<<<<<<< HEAD
-=======
-******** IMPORTANT AVANT RENDU ********
-* Accès à admin.php
-
-* Couleur du texte pour l'admin
-***************************************
-
-* En cours --> Il faut que l'image générée par generate.php et affichée sur visualisation.php soit identique à la prévisualisation de index.html. Régler ce problème.
-    Voir pour trouver comment justifier le texte qur l'image générée
-
->>>>>>> e1c0585d2172ac002ab38a0597d42ac94024a827
 * Options d'éditions de texte (https://openclassrooms.com/courses/creez-un-editeur-de-texte-wysiwyg)
 
 _____________________________________________________________________________________________________________________________________________________________________
@@ -46,10 +34,7 @@ OK :
     N.B. : sylvain.denyse@etu.univ-nantes.fr = e145252h@etu.univ-nantes.fr
 
 * OK --> Validation adresse mail via js & php
-<<<<<<< HEAD
 
 * OK --> Accès à admin.php
 
-* OK --> Il faut que l'image générée par generate.php et affichée sur visualisation.php soit identique à la prévisualisation de index.html. Régler ce problème.
-=======
->>>>>>> e1c0585d2172ac002ab38a0597d42ac94024a827
+* OK --> En cours --> Il faut que l'image générée par generate.php et affichée sur visualisation.php soit identique à la prévisualisation de index.html. Régler ce problème.

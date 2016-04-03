@@ -1,9 +1,4 @@
 function transcript() {
-<<<<<<< HEAD
-=======
-    var txt = document.getElementById("contenu");
-
->>>>>>> e1c0585d2172ac002ab38a0597d42ac94024a827
     $('#leTexte').val($('#contenu').html());
 }
 
@@ -14,7 +9,6 @@ function ajoutMail() {
 
 function precedent() {
     document.location.href="editor.php";
-<<<<<<< HEAD
 }
 
 function surligne($champ, erreur) {
@@ -26,19 +20,6 @@ function surligne($champ, erreur) {
     }
 }
 
-=======
-}
-
-function surligne($champ, erreur) {
-	if(erreur) {
-        // console.log(champ);
-        $champ.css('background-color', '#ff7c7c');
-    } else {
-        $champ.css('background-color', 'transparent');
-    }
-}
-
->>>>>>> e1c0585d2172ac002ab38a0597d42ac94024a827
 
 function verifMail(champ) {
     var $champ = $(champ);
