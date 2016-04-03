@@ -1,6 +1,7 @@
 <?php
 require_once("cas.php");
 require_once("ldap/ldap.class.php");
+require_once("auth.php");
 
 $ldap = new LDAP();
 $userdata = $ldap->getuserinfo($login);
@@ -15,6 +16,7 @@ $fullname = $userdata[0]['displayname'][0];
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -29,7 +31,7 @@ $fullname = $userdata[0]['displayname'][0];
     </div>
 
     <?php
-    if($login == 'E145252H' || $login == 'mbrunet')
+    if(isAdmin($login))
     {
         ?>
         <div id="admin">
@@ -59,12 +61,12 @@ $fullname = $userdata[0]['displayname'][0];
     </div>
 
     <div id="sendText" class="corps">
-        <!--ICI-->        <p><form method="POST" action="generate.php">
-        <input id="leTexte" type="hidden" name="texte"/>
-        <input type="color" name="color"></br>
-        <input type="submit" value="Envoyer" onclick="transcript();">
-    </form></p>
-</div>
+        <p><form method="POST" action="generate.php">
+            <input id="leTexte" hidden="hidden" name="texte"/>
+            <input type="color" name="color" hidden="hidden"></br>
+            <input type="submit" value="Envoyer" onclick="transcript();">
+        </form></p>
+    </div>
 
 <div id="pied_page">
     <ul class="copyright">

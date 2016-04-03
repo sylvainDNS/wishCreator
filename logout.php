@@ -1,4 +1,6 @@
 <?php
+	error_reporting(E_ALL & ~E_NOTICE);
+
     require_once("CAS-1.3.4/CAS.php");
 
     $confCas = array(
@@ -17,5 +19,5 @@
     phpCAS::setNoCasServerValidation();
 
     echo "...";
-    phpCAS::logoutWithRedirectService("http://localhost/wishCreator/");
+    phpCAS::logoutWithRedirectService("http://infoweb.iut-nantes.univ-nantes.prive/~carte-voeux/");
     echo "done";
